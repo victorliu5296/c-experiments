@@ -8,24 +8,11 @@
 *.dll
 *.dylib
 
-# Ignore dependency directories
-node_modules/
-bower_components/
-
-# Ignore directories created by Visual Studio Code
-.vscode/
-
-# Ignore macOS generated files
-.DS_Store
-
 # Ignore temporary files
 *.tmp
 *.log
 *.swp
 *.swo
-
-# Ignore compiled python files
-__pycache__/
 
 # Ignore MinGW-specific files
 *.stackdump
