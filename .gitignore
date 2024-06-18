@@ -1,4 +1,6 @@
 # Ignore build artifacts
+/c-experiments
+/x64
 *.exe
 *.obj
 *.o
