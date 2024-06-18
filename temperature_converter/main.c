@@ -3,24 +3,25 @@
 
 int main()
 {
-    float temp;
+    float temperature;
     char unit;
 
-    printf("Enter temperature followed by unit (C/F), e.g. 20 C: ");
-    scanf_s("%f %c", &temp, &unit, 1);
+    printf("Enter temperature followed by unit (C/F): ");
+    scanf("%f %c", &temperature, &unit);
 
-    if (unit == 'C' || unit == 'c')
+    switch (unit)
     {
-        printf("%.2f C = %.2f F\n", temp, celsiusToFahrenheit(temp));
-    }
-    else if (unit == 'F' || unit == 'f')
-    {
-        printf("%.2f F = %.2f C\n", temp, fahrenheitToCelsius(temp));
-    }
-    else
-    {
+    case 'C':
+    case 'c':
+        printf("%.2f C = %.2f F\n", temperature, celsiusToFahrenheit(temperature));
+        break;
+    case 'F':
+    case 'f':
+        printf("%.2f F = %.2f C\n", temperature, fahrenheitToCelsius(temperature));
+        break;
+    default:
         printf("Invalid unit.\n");
+        break;
     }
-
     return 0;
 }
