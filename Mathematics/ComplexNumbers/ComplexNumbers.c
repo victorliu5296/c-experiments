@@ -3,7 +3,7 @@
 #include <math.h>  // for NAN
 #include <errno.h> // for errno
 
-Complex complexAdd(Complex *a, Complex *b)
+Complex complex_add(Complex *a, Complex *b)
 {
     Complex result;
     result.real = a->real + b->real;
@@ -11,7 +11,7 @@ Complex complexAdd(Complex *a, Complex *b)
     return result;
 }
 
-Complex complexSubtract(Complex *a, Complex *b)
+Complex complex_subtract(Complex *a, Complex *b)
 {
     Complex result;
     result.real = a->real - b->real;
@@ -19,7 +19,7 @@ Complex complexSubtract(Complex *a, Complex *b)
     return result;
 }
 
-Complex complexMultiply(Complex *a, Complex *b)
+Complex complex_multiply(Complex *a, Complex *b)
 {
     Complex result;
     result.real = a->real * b->real - a->imag * b->imag;
@@ -27,7 +27,7 @@ Complex complexMultiply(Complex *a, Complex *b)
     return result;
 }
 
-Complex complexDivide(Complex *a, Complex *b) {
+Complex complex_divide(Complex *a, Complex *b) {
     Complex result;
     float denominator = b->real * b->real + b->imag * b->imag;
 
@@ -45,7 +45,7 @@ Complex complexDivide(Complex *a, Complex *b) {
     return result;
 }
 
-Complex complexConjugate(Complex *a)
+Complex complex_conjugate(Complex *a)
 {
     Complex result;
     result.real = a->real;
@@ -53,17 +53,17 @@ Complex complexConjugate(Complex *a)
     return result;
 }
 
-float complexMagnitude(Complex *a)
+float complex_magnitude(Complex *a)
 {
     return sqrt(a->real * a->real + a->imag * a->imag);
 }
 
-float complexArgument(Complex *a)
+float complex_argument(Complex *a)
 {
     return atan2(a->imag, a->real);
 }
 
-void printComplex(Complex *c)
+void complex_print(Complex *c)
 {
     if (c->imag >= 0)
     {

@@ -16,7 +16,7 @@ typedef struct
  * @param b Second complex number
  * @return The sum of the two complex numbers
  */
-Complex complexAdd(Complex *a, Complex *b);
+Complex complex_add(Complex *a, Complex *b);
 
 /**
  * Subtracts two complex numbers.
@@ -24,7 +24,7 @@ Complex complexAdd(Complex *a, Complex *b);
  * @param b Second complex number
  * @return The difference of the two complex numbers
  */
-Complex complexSubtract(Complex *a, Complex *b);
+Complex complex_subtract(Complex *a, Complex *b);
 
 /**
  * Multiplies two complex numbers.
@@ -32,7 +32,7 @@ Complex complexSubtract(Complex *a, Complex *b);
  * @param b Second complex number
  * @return The product of the two complex numbers
  */
-Complex complexMultiply(Complex *a, Complex *b);
+Complex complex_multiply(Complex *a, Complex *b);
 
 /**
  * Divides one complex number by another.
@@ -40,21 +40,21 @@ Complex complexMultiply(Complex *a, Complex *b);
  * @param b The complex number to divide by.
  * @return The quotient of the two complex numbers, or a complex number with NaN values if the denominator is zero.
  */
-Complex complexDivide(Complex *a, Complex *b);
+Complex complex_divide(Complex *a, Complex *b);
 
 /**
  * Returns the complex conjugate of a complex number.
  * @param a The complex number = x + yi
  * @return The conjugate of the complex number = x - yi
  */
-Complex complexConjugate(Complex *a);
+Complex complex_conjugate(Complex *a);
 
 /**
  * Returns the magnitude of a complex number.
  * @param a The complex number = x + yi
  * @return The magnitude of the complex number = sqrt(x^2 + y^2)
  */
-float complexMagnitude(Complex *a);
+float complex_magnitude(Complex *a);
 
 /**
  * Returns the argument of a complex number, which is the angle in radians between
@@ -64,12 +64,12 @@ float complexMagnitude(Complex *a);
  * @param a The complex number = x + yi
  * @return The argument of the complex number in radians = atan2(y, x) from -PI to PI
  */
-float complexArgument(Complex *a);
+float complex_argument(Complex *a);
 
 /**
  * Prints a complex number to the console in the form x + yi
  * @param c The complex number
  */
-void printComplex(Complex *c);
+void complex_print(Complex *c);
 
 #endif // COMPLEX_NUMBERS_H

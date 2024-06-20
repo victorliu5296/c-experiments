@@ -9,7 +9,7 @@ example_entry examples[] = {
     #undef X
 };
 
-void clear_screen()
+static void clear_screen()
 {
 #ifdef _WIN32
     system("cls");
@@ -51,6 +51,7 @@ int main()
         }
         else if (choice > 0 && choice <= sizeof(examples) / sizeof(example_entry))
         {
+            printf("Running example: %s\n", examples[choice - 1].name);
             examples[choice - 1].func();
             printf("\n\n");
         }
