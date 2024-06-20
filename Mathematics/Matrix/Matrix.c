@@ -3,7 +3,7 @@
 #include "Matrix.h"
 
 // Function to create a matrix
-Matrix createMatrix(int rows, int cols)
+Matrix allocateEmptyMatrix(int rows, int cols)
 {
     Matrix matrix;
     matrix.rows = rows;
@@ -19,7 +19,7 @@ Matrix createMatrix(int rows, int cols)
 // Function to create a matrix from a 2D array
 Matrix createMatrixFromArray(int rows, int cols, double *values)
 {
-    Matrix matrix = createMatrix(rows, cols);
+    Matrix matrix = allocateEmptyMatrix(rows, cols);
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -31,7 +31,7 @@ Matrix createMatrixFromArray(int rows, int cols, double *values)
 }
 
 // Function to free the memory allocated for a matrix
-void freeMatrix(Matrix *matrix)
+void deleteMatrix(Matrix *matrix)
 {
     for (int i = 0; i < matrix->rows; i++)
     {
